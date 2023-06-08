@@ -14,7 +14,6 @@ const createDatoCont = async (datsoObj) => {
         URL: datsoObj.URL,
         domicilio: datsoObj.domicilio,
         servicios: datsoObj.servicios
-
     } 
     const data = await DatosContacto.create(newDato)
     return data

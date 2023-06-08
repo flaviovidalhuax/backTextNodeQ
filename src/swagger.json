@@ -176,6 +176,148 @@
                         }
                     }
                 }
+            },
+            "/api/v1/client":{
+                "get":{
+                    "summary":"Get all Client",
+                    "responses":{
+                        "200":{
+                            "description":"getting all client succesfull"
+                        },
+                        "400":{"description":"bad request"}
+                    }
+                    },
+                    "post":{
+                        "summary":"creat a new client",
+                        "parameters":[
+                            {
+                                "in":"body",
+                                "name":"body",
+                                "description":"User to add base data",
+                                "required":true,
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "name":{
+                                            "type":"string"
+                                        },
+                                        "apellidoPaterno":{
+                                            "type":"string"
+                                        },
+                                        "apellidoMaterno":{
+                                            "type":"string"
+                                        },
+                                        "email":{
+                                            "type":"string"
+                                        },
+                                        "phone":{
+                                            "type":"string"
+                                        },
+                                        "gender":{
+                                            "type":"string"
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "responses":{
+                            "200":{"description":"creat a new Client"},
+                            "400":{"description":" error to creat new client"}
+                        }
+                      
+                               
+                    }
+            },
+            "/api/v1/clave":{
+                "get":{
+                    "summary":"Get all Clave",
+                    "responses":{
+                        "200":{
+                            "description":"getting all clave succesfull"
+                        },
+                        "400":{"description":"bad request"}
+                    }
+                    },
+                    "post":{
+                        "summary":"creat a new clave",
+                        "parameters":[
+                            {
+                                "in":"body",
+                                "name":"body",
+                                "description":"User to add base data",
+                                "required":true,
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "rfc":{
+                                            "type":"string"
+                                        },
+                                        "CuentaBnacaria":{
+                                            "type":"string"
+                                        },
+                                        "Ine":{
+                                            "type":"string"
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "responses":{
+                            "200":{"description":"creat a new Clave"},
+                            "400":{"description":" error to creat new clave"}
+                        }
+                      
+                               
+                    }
+            },
+            "/api/v1/contac":{
+                "get":{
+                    "summary":"Get all Data od contact",
+                    "responses":{
+                        "200":{
+                            "description":"getting all Data succesfull"
+                        },
+                        "400":{"description":"bad request"}
+                    }
+                    },
+                    "post":{
+                        "summary":"creat a new Data of contact",
+                        "parameters":[
+                            {
+                                "in":"body",
+                                "name":"body",
+                                "description":"User to add base data",
+                                "required":true,
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "empresa":{
+                                            "type":"string"
+                                        },
+                                        "representanteLegal":{
+                                            "type":"string"
+                                        },
+                                        "Ine":{
+                                            "type":"string"
+                                        },
+                                        "domicilio":{
+                                            "type":"string"
+                                        },
+                                        "servicios":{
+                                            "type":"string"
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        ],
+                        "responses":{
+                            "200":{"description":"creat a new data of contact"},
+                            "400":{"description":" error to creat new contact"}
+                        }
+                      
+                               
+                    }
             }
     
         }
